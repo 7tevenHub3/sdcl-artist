@@ -1,0 +1,155 @@
+/* dimensioni DISPLAY in pixel logici: Supponiamo una ratio 1/2 per le colonne.
+   
+   SMARTPHONE: 360x800px (android). QUINDI: Colonna-A---MAX 240 + Colonna-B---MAX 120 = Larghezza-TOT 360px
+   TABLET: 928x1484 (android). -----QUINDI: Colonna-A---MAX 618 + Colonna-B---MAX 310 = Larghezza-TOT 928px
+   LAPTOP: 768x1366. ---------------QUINDI: Colonna-A---MAX 512 + Colonna-B---MAX 256 = Larghezza-TOT 768px
+   DESKTOP Larghezza 1024px --------QUINDI: Colonna-A---MAX 682 + Colonna-B---MAX 342 = Larghezza-TOT 1024px
+   MAX DIMENSIONI Larghezza 1320px -QUINDI: Colonna-A---MAX 840 + Colonna-B---MAX 420 = Larghezza-TOT 1320px
+   N.B.: Nonostante esistano schermi molto grandi utilizzabile 
+   anche per un computer comune con risoluzioni fino a 2560px o 3440px 
+   in realtà l'occhio umano lavora molto bene su dimesnioni 
+   fra i 1200px e 1440px al massimo*/
+
+/*QUERY PER I MEDIA per settare la soluzione preferita: 
+url(stile-main-4.css)
+IN html SI CONSIGLIA la PREFERENZA per il MOBILE: 
+<link rel="stylesheet" href="stile-main-mobile.css" media="screen and (max-width:767px)"
+
+NELLA PAGINA CSS si consiglia di utilizzare le seguenti varianti:
+@media screen and (min-width:768px) and (max-width: 1024px) {container-columns{width:946px}} 
+
+@media screen and (min-width: 1025px) {container-column{width:1024px:}}
+*/
+
+/*VARI TIPI DI SELETTORI:
+  SELETTORI DI TIPO (TAG): p, div, a --- in HTML si richiamano con <p>, <div>, <a> strutture di base
+  SELETTORI DI CLASSE: .esempio {} ----- in HTML si richiamano con class="esempio" riutilizzabili
+  SELETTORI ID: #esempio {} ------------ in HTML si richiamano con id="esempio" per elementi unici 
+*/
+
+/*SELETTORI DI CLASSE*/
+
+/* ------------------- */
+/*     BODY STYLE      */
+/* ------------------- */
+
+.body-style {
+  background-color:brown;
+}
+
+/* ------------------- */
+/*  CONTAINER-COLUMN   */
+/* ------------------- */
+
+.container-style {
+  display: flex;
+
+  width: 598px;
+  margin: 0 auto;
+  border: 10px; padding: 10px; 
+
+  gap: 10px;
+
+  background-color: blue;
+
+}
+
+/* PRIMO GRUPPO - MAIN */
+/* ------------------- */
+/*    COLUMN-MAIN      */
+
+.main-column {
+
+  flex: 5;
+
+}
+
+
+/* HEADER */
+/* ------------------- */
+
+
+/* TITLE-MAIN */
+/* ------------------- */
+
+.main-title{
+
+}
+
+/* ------------------- */
+/* NAVIGATION-BOX */
+/* ------------------- */
+
+/* ICON-BOX-MAIN */
+
+/* ICON-MAIN */
+
+/*NAVIGATION-MAIN*/
+
+/* NAVIGATION-BOX CLOSED */
+
+/* ------------------- */
+/*MAIN-CONTENT*/
+/* ------------------- */
+
+/*IMAGE-BOX-MAIN*/
+
+/*SUB-TITLE*/
+
+/*IMAGE-BOX-POINTER*/
+
+/*TEXT-BOX-MAIN*/
+
+/*LINK-STRIP-BOX*/
+
+/*FOOTER*/
+
+/* ------------------- */
+/*    MAIN CLOSED      */
+/* ------------------- */
+
+/*  SECONDO GRUPPO  */
+/*------------------*/
+/*  COLUMN-ASIDE    */
+
+.aside-box{
+  flex: 2;
+}
+
+/* ICON-ASIDE */ 
+
+/* TITLE-ASIDE */
+
+/* ------------------- */
+
+/* CONTAINER-ASIDE*/
+
+/*IMAGE-BOX-CIRCLE-GOLD*/ 
+
+/* ------------------- */
+/*     BODY CLOSED     */
+
+
+/* -------------------------------- */
+/* TYPE SELECTOR - SELETTORI DI TAG */
+/* -------------------------------- */
+
+p {font-family: Georgia, 'Times New Roman', Times, serif;}
+
+h1 {font-size: 1.6rem; }
+
+h2 {font-size: 1.4rem; }
+
+h3 {font-size: 1.2rem; }
+
+h4 {font-size: 1.0rem; }
+
+h5 {font-size: 0.8rem; }
+
+h6 {font-size: 0.6rem; }
+
+/* END */
+
+
+
+

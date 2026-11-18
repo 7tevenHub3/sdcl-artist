@@ -1,0 +1,385 @@
+/* dimensioni DISPLAY in pixel logici: Supponiamo una ratio 1/2 per le colonne.
+   
+   SMARTPHONE: 360x800px (android). QUINDI: Colonna-A---MAX 240 + Colonna-B---MAX 120 = Larghezza-TOT 360px
+   TABLET: 928x1484 (android). -----QUINDI: Colonna-A---MAX 618 + Colonna-B---MAX 310 = Larghezza-TOT 928px
+   LAPTOP: 768x1366. ---------------QUINDI: Colonna-A---MAX 512 + Colonna-B---MAX 256 = Larghezza-TOT 768px
+   DESKTOP Larghezza 1024px --------QUINDI: Colonna-A---MAX 682 + Colonna-B---MAX 342 = Larghezza-TOT 1024px
+   MAX DIMENSIONI Larghezza 1320px -QUINDI: Colonna-A---MAX 840 + Colonna-B---MAX 420 = Larghezza-TOT 1320px
+   N.B.: Nonostante esistano schermi molto grandi utilizzabile 
+   anche per un computer comune con risoluzioni fino a 2560px o 3440px 
+   in realtà l'occhio umano lavora molto bene su dimesnioni 
+   fra i 1200px e 1440px al massimo*/
+
+/*QUERY PER I MEDIA per settare la soluzione preferita: 
+url(stile-main-4.css)
+IN html SI CONSIGLIA la PREFERENZA per il MOBILE: 
+<link rel="stylesheet" href="stile-main-mobile.css" media="screen and (max-width:767px)"
+
+NELLA PAGINA CSS si consiglia di utilizzare le seguenti varianti:
+@media screen and (min-width:768px) and (max-width: 1024px) {container-columns{width:946px}} 
+
+@media screen and (min-width: 1025px) {container-column{width:1024px:}}
+*/
+
+/*VARI TIPI DI SELETTORI:
+  SELETTORI DI TIPO (TAG): p, div, a --- in HTML si richiamano con <p>, <div>, <a> strutture di base
+  SELETTORI DI CLASSE: .esempio {} ----- in HTML si richiamano con class="esempio" riutilizzabili
+  SELETTORI ID: #esempio {} ------------ in HTML si richiamano con id="esempio" per elementi unici 
+*/
+
+/*SELETTORI DI CLASSE*/
+
+/* ------------------- */
+/*     BODY STYLE      */
+/* ------------------- */
+
+
+
+
+.body-style {
+  /* Sfondo base (il colore principale del velluto) */
+  background-color: #255e5e; /* Un classico marrone bruciato */
+
+  /* Definizione del pattern a righe verticali */
+  background-image: linear-gradient(
+    90deg,
+    rgba(80, 187, 182, 0.07) 0%,   /* Luce sul colmo della costa */
+    rgba(36, 88, 82, 0.03) 25%,  /* Sfumatura morbida */
+    rgba(0, 0, 0, 0.0) 50%,          /* Colore base neutro */
+    rgba(5, 58, 45, 0.15) 75%,         /* Ombra nel solco tra le coste */
+    rgba(20, 51, 48, 0.25) 100%         /* Il punto più profondo e scuro del solco */
+  );
+
+  /* Larghezza della singola riga (costa) del velluto */
+  background-size: 23px 100%;}
+
+/* ------------------- */
+/*  CONTAINER-COLUMN   */
+/* ------------------- */
+
+.container-style {
+
+  display: flex;
+
+  width: 752px;
+  margin: 25px auto; padding: 20px; 
+
+  gap: 10px;
+
+  background-color: darkslategray;
+  border: 3px solid goldenrod;
+
+  border-radius: 70px;
+  box-shadow:  24px -24px 10px -10px rgba(67, 119, 107, 0.5);
+}
+
+/* PRIMO GRUPPO - MAIN */
+/* ------------------- */
+/*    COLUMN-MAIN      */
+
+.main-column {
+  flex: 3;
+}
+
+
+/* HEADER */
+/* ------------------- */
+
+
+/* TITLE-MAIN */
+/* ------------------- */
+
+.main-title{
+color: goldenrod;
+background-color: darkslategray;
+
+display: flex; 
+text-align: center;
+align-items: center;
+justify-content: center;
+
+
+height: 55px;
+
+margin: 8px;
+border: 3px solid;
+padding: 8px;  
+
+border-radius: 40px;
+
+}
+
+/* ------------------- */
+/* NAVIGATION-BOX */
+/* ------------------- */
+
+/* ICON-BOX-MAIN */
+
+.nav-container{
+
+color: goldenrod;
+background-color: darkslategray;
+
+display: flex; 
+text-align: center;
+align-items: center;
+justify-content: center;
+
+
+height: 55px;
+
+margin: 8px;
+
+padding: 8px;  
+
+
+}
+
+/* ICON-MAIN */
+
+.main-box-logo{
+  display: none;
+}
+
+/*NAVIGATION-MAIN*/
+
+#main-menu{
+
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
+gap: 12px;
+
+}
+
+/* NAVIGATION-BOX CLOSED */
+
+/* ------------------- */
+/*MAIN-CONTENT*/
+/* ------------------- */
+
+/*IMAGE-BOX-MAIN*/
+
+.image-box-main {
+display: flex; 
+align-items: center;
+justify-content: center;
+
+
+max-width: 75%;
+height:fit-content;
+
+margin: 8px;
+padding: 12%;  
+
+background-image: linear-gradient(to bottom,
+ darkslategray, rgb(83, 133, 133), aliceblue);
+box-shadow: inset 12px -12px 6px -6px rgba(67, 119, 107, 0.5);
+
+border-bottom-right-radius: 40px;
+border-bottom-left-radius: 40px;
+
+}
+
+/*SUB-TITLE*/
+
+.sub-title-box {
+  background-color: darkslategrey;
+  color: goldenrod;
+
+  display: flex; 
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+  word-spacing: 1em;
+}
+
+/*IMAGE-BOX-POINTER*/
+
+/*TEXT-BOX-MAIN*/
+
+.text-box-main {
+
+display: flex; 
+text-align:justify ;
+align-items: center;
+justify-content: center;
+
+max-width: 100%;
+
+margin: 8px;
+padding: 16px;  
+
+background-color:  aliceblue;
+box-shadow: inset 12px 0 6px 0 rgba(67, 119, 107, 0.5);
+
+border-top-right-radius: 40px;
+border-top-left-radius: 40px;
+
+}
+
+/*LINK-STRIP-BOX*/
+
+.link-strip-box{
+  
+display: flex; 
+text-align:justify ;
+align-items: center;
+justify-content: center;
+
+max-width: 100%;
+
+margin: 8px;
+padding: 16px;  
+
+background-color: darkslategray;
+box-shadow: 0 0 0 0 rgba(67, 119, 107, 0.5);
+
+}
+
+/*FOOTER*/
+
+.footer-style{
+
+display: flex; 
+text-align:justify ;
+align-items: center;
+justify-content: center;
+
+max-width: 100%;
+
+margin: 8px;
+padding: 16px;  
+
+background-color:  aliceblue;
+box-shadow: inset 12px -12px 6px -6px rgba(67, 119, 107, 0.5);
+
+border-bottom-right-radius: 40px;
+border-bottom-left-radius: 40px;
+
+}
+
+/* ------------------- */
+/*    MAIN CLOSED      */
+/* ------------------- */
+
+/*  SECONDO GRUPPO  */
+/*------------------*/
+/*  COLUMN-ASIDE    */
+
+.aside-box{
+
+flex: 1;
+background-color: darkslategray;
+color: goldenrod; 
+
+width: 100%;
+
+display: flex; 
+align-items: center;
+justify-content:start;
+flex-direction: column;
+
+margin: 8px;
+border: 3px solid;
+padding: 8px;  
+
+border-radius: 40px;
+}
+
+/* ICON-ASIDE */ 
+
+.icon-aside{
+  width: 100%;
+  height: 150px;
+
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+}
+
+/* TITLE-ASIDE */
+
+.title-aside {
+
+  color: darkslategrey;
+  background-color: goldenrod;
+
+  width: 100%;
+
+  display: flex; 
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+
+margin: 8px;
+
+padding: 8px;  
+
+}
+
+/* ------------------- */
+
+/* LINKS-CONTAINER */
+
+.links-container{
+  background-color: darkslategrey;
+  
+  width: 100%;
+
+  display: flex; 
+  text-align: center;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+/*IMAGE-BOX-CIRCLE-GOLD*/ 
+
+.image-box-circle-gold{
+
+  background-color: goldenrod;
+  height: 155px;
+  width: 155px;
+  border-radius: 50%;
+ 
+  display:flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+/* ------------------- */
+/*     BODY CLOSED     */
+
+
+/* -------------------------------- */
+/* TYPE SELECTOR - SELETTORI DI TAG */
+/* -------------------------------- */
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+}
+
+h1 {font-size: 1.5rem; }
+
+h2 {font-size: 1.3rem; }
+
+h3 {font-size: 1.2rem; }
+
+h4 {font-size: 1.1rem; }
+
+h5 {font-size: 1.0rem; }
+
+h6 {font-size: 0.9rem; }
+
+
+
+
+
+
